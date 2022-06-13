@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Generador de memes</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Generador de Memes</h1>
+      <div class="header-botones">
+        <button class="header-boton">
+          <i class="fa-solid fa-image"></i> Imagen
+        </button>
+        <button class="header-boton">
+          <i class="fa-solid fa-pencil"></i> Texto
+        </button>
+        <!-- Boton de modo Oscuro buscar en la clase -->
+      </div>
+    </header>
+    <main class="contenedor-principal">
+      <div class="cuadrado-imagen">
+        <div class="texto-arriba"></div>
+        <div class="texto-abajo"></div>
+      </div>
+      <button class="boton-guardar-imagen">
+        <i class="fa-solid fa-download"></i>Guardar imagen
+      </button>
+    </main>
+    <aside class="panel-estilado">
+      <button class="boton-panel-cierre">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="panel-imagen">
+        <h2>Imagen</h2>
+        <div class="panel-imagen-url">
+          <h3 class="panel-titulos-chicos">URL</h3>
+          <input type="text" placeholder="Ingrese la URL aquí" />
+        </div>
+        <div>
+          <h3 class="panel-titulos-chicos">Fondo</h3>
+          <div class="contenedor-panel-imagen-fondo">
+            <div class="panel-imagen-fondo-color">
+              <input type="color" value="asdjajsd" />
+              <span class="fondo-valor-color">#000000</span>
+            </div>
+            <div class="panel-imagen-fondo-opciones">
+              <select class="opciones-filtros">
+                <option value="">Ninguno</option>
+                <option value="">Aclarar</option>
+                <option value="">Oscurecer</option>
+                <option value="">Diferencia</option>
+                <option value="">Luminosidad</option>
+                <option value="">Multiplicar</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="panel-imagen-filtros">
+          <h3 class="panel-titulos-chicos">Filtros</h3>
+          <div class="brillo contenedor-input-rango">
+            <label for="">Brillo</label>
+            <input type="range" />
+          </div>
+          <div class="opacidad contenedor-input-rango">
+            <label for="">Opacidad</label>
+            <input type="range" />
+          </div>
+          <div class="contraste contenedor-input-rango">
+            <label for="">Contraste</label>
+            <input type="range" />
+          </div>
+          <div class="desenfoque contenedor-input-rango">
+            <label for="">Desenfoque</label>
+            <input type="range" />
+          </div>
+          <div class="escala-de-grises contenedor-input-rango">
+            <label for="">Escala de grises</label>
+            <input type="range" />
+          </div>
+          <div class="sepia contenedor-input-rango">
+            <label for="">Sepia</label>
+            <input type="range" />
+          </div>
+          <div class="Hue contenedor-input-rango">
+            <label for="">HUE</label>
+            <input type="range" />
+          </div>
+          <div class="saturado contenedor-input-rango">
+            <label for="">Saturado</label>
+            <input type="range" />
+          </div>
+          <div class="negativo contenedor-input-rango">
+            <label for="">Negativo</label>
+            <input type="range" />
+          </div>
+          <div class="contenedor-boton-restablecer-filtros">
+            <button class="boton-restablecer-filtros">
+              Restablecer filtros
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-texto"></div>
+    </aside>
+    <script src="main.js"></script>
+  </body>
+</html>
