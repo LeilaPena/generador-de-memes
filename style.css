@@ -67,7 +67,6 @@ body{
     justify-content: space-around;
 }
 .panel-imagen-fondo-color{
-
     width: 90%;
 }
 .contenedor-input-rango{
@@ -96,6 +95,37 @@ input[type='range']{
     cursor: pointer;
     padding: 2%;
 }
-.fondo-valor-color{
+.valor-color{
     font-size: 12px;
+}
+.panel-imagen{
+    display: none;
+}
+.panel-texto{
+ flex-wrap: wrap;
+}
+.titulo-texto{
+    text-align: center;
+}
+.panel-color-y-fondo{
+    display: flex;
+}
+.contenedor-checkbox-label{
+    display: flex;
+    align-items: center;
+    margin: 3% 0;
+}
+.label-checkbox{
+    font-size: 14px;
+    margin-left: 3%;
+}
+.boton-fuente, .boton-contorno{
+    padding: 0 3%;
+    margin: 2% 0;
+}
+.fuente-tamanio{
+    width: 120px;
+}
+.tomar-todo-el-ancho{
+    width: 100%;
 }
