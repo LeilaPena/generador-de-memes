@@ -29,8 +29,21 @@ body{
 }
 .cuadrado-imagen{
     height: 430px;
-    width: 500px;
+    width: 430px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.texto-arriba, .texto-abajo{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parrafo-texto-arriba, .parrafo-texto-abajo{
+    font-size: 40px;
+    padding: 3%;
 }
 .boton-guardar-imagen{
     margin-top: 1.7%;
@@ -100,9 +113,6 @@ input[type='range']{
 }
 .panel-imagen{
     display: none;
-}
-.panel-texto{
- flex-wrap: wrap;
 }
 .titulo-texto{
     text-align: center;
