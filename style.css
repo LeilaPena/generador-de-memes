@@ -44,9 +44,18 @@ body{
     align-items: center;
     justify-content: center;
     position: static;
+    /* margin-block-end: 1em; */
+    
+}
+.texto-superior{
+     display: flex;
+    justify-content: flex-start; 
+    
 }
 .texto-inferior{
-    bottom: 0;
+    display: flex;
+    justify-content:flex-end;
+  
 }
 .parrafo-texto-superior, .parrafo-texto-inferior{
     font-size: 40px;
