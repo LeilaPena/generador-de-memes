@@ -33,12 +33,12 @@ body{
     background-color: black;
 }
 .cuadrado-imagen{
-    background-image: url('https://placekitten.com/1000/1000');
     background-size: cover;
     display: flex;
     flex-direction: column;
 }
 .texto-superior, .texto-inferior{
+    /* Para que sea transparente background: transparent; */
     background-color: white;
     display: flex;
     align-items: center;

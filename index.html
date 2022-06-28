@@ -34,7 +34,7 @@
       </div>
     </header>
     <main class="contenedor-principal">
-      <div class="cuadrado-imagen">
+      <div class="cuadrado-imagen" id="cuadrado-imagen">
         <div class="texto-superior" id="texto-superior">
           <p class="parrafo-texto-superior">TOP TEXT</p>
         </div>
@@ -56,7 +56,7 @@
         <h2 class="titulo-imagen">Imagen</h2>
         <div class="panel-imagen-url">
           <h3 class="panel-titulos-chicos">URL</h3>
-          <input type="text" placeholder="Ingrese la URL aquí" />
+          <input type="text" placeholder="Ingrese la URL aquí" id="input-url"/>
         </div>
         <div>
           <h3 class="panel-titulos-chicos">Fondo</h3>
@@ -130,8 +130,8 @@
           <h3 class="panel-titulos-chicos">Superior</h3>
           <textarea name="" id="" cols="30" rows="1" class="tomar-todo-el-ancho"></textarea>
           <div class="contenedor-checkbox-label">
-            <input type="checkbox" id="boton-sin-texto-superior" />
-            <label for="sin-texto-superior" class="label-checkbox"
+            <input type="checkbox" id="checkbox-sin-texto-superior" />
+            <label for="checkbox-sin-texto-superior" class="label-checkbox"
               >Sin texto superior</label
             >
           </div>
@@ -140,8 +140,8 @@
           <h3 class="panel-titulos-chicos">Inferior</h3>
           <textarea name="" id="" cols="30" rows="1" class="tomar-todo-el-ancho"></textarea>
           <div class="contenedor-checkbox-label">
-            <input type="checkbox" id="boton-sin-texto-inferior">
-            <label for="sin-texto-inferior" class="label-checkbox"
+            <input type="checkbox" id="checkbox-sin-texto-inferior">
+            <label for="checkbox-sin-texto-inferior" class="label-checkbox"
               >Sin texto inferior</label
             >
           </div>
@@ -194,8 +194,8 @@
             </div>
           </div>
           <div class="contenedor-checkbox-label">
-            <input type="checkbox" name="" id="fondo-transparente-input" />
-            <label for="fondo-transparente-input" class="label-checkbox"
+            <input type="checkbox" name="" id="checkbox-fondo-transparente" />
+            <label for="checkbox-fondo-transparente" class="label-checkbox"
               >Fondo transparente</label
             >
           </div>

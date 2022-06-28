@@ -15,32 +15,40 @@ botonPanelTexto.addEventListener('click',()=>{
 // Botones para cartel de top text y bottom text
 const textoSuperior= document.getElementById('texto-superior')
 const textoInferior= document.getElementById('texto-inferior')
-const botonSinTextoSuperior= document.getElementById('boton-sin-texto-superior')
-const botonSinTextoInferior= document.getElementById('boton-sin-texto-inferior')
-const fondoTransparenteInput= document.getElementById('fondo-transparente-input')
-botonSinTextoSuperior.addEventListener('click',()=>{
-    if (botonSinTextoSuperior.checked){
+const checkboxSinTextoSuperior= document.getElementById('checkbox-sin-texto-superior')
+const checkboxSinTextoInferior= document.getElementById('checkbox-sin-texto-inferior')
+const checkboxFondoTransparente= document.getElementById('checkbox-fondo-transparente')
+checkboxSinTextoSuperior.addEventListener('click',()=>{
+    if (checkboxSinTextoSuperior.checked){
         textoSuperior.style.display= 'none';
     }
     else{
         textoSuperior.style.display='flex';
     }
 })
-botonSinTextoInferior.addEventListener('click',()=>{
-    if (botonSinTextoInferior.checked){
+checkboxSinTextoInferior.addEventListener('click',()=>{
+    if (checkboxSinTextoInferior.checked){
         textoInferior.style.display= 'none';
     }
     else{
         textoInferior.style.display='flex';
     }
 })
-fondoTransparenteInput.addEventListener('click',()=>{
-    if (fondoTransparenteInput.checked){
-        textoInferior.style.display='none';
-        textoSuperior.style.display= 'none';
+checkboxFondoTransparente.addEventListener('click',()=>{
+    if (checkboxFondoTransparente.checked){
+        textoInferior.style.visibility='hidden';
+        textoSuperior.style.visibility= 'hidden';
     }
     else{
-        textoInferior.style.display='flex';
-        textoSuperior.style.display='flex';
+        textoInferior.style.visibility='visible';
+        textoSuperior.style.visibility='visible';
     }
+})
+// Input para ingresar URL
+const inputURL=document.getElementById('input-url');
+const cuadradoImagen= document.getElementById('cuadrado-imagen')
+inputURL.addEventListener('input',event =>{
+const urlImagen= event.target.value;
+cuadradoImagen.style.backgroundImage=`url("${urlImagen}")`;
+
 })
