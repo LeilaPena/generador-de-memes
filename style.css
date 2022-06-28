@@ -32,12 +32,11 @@ body{
     width: 430px;
     background-color: black;
 }
-.imagen{
-    height: 430px;
-    width: 430px;
-    flex-grow: 1;
+.cuadrado-imagen{
     background-image: url('https://placekitten.com/1000/1000');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 .texto-superior, .texto-inferior{
     background-color: white;
@@ -46,7 +45,9 @@ body{
     justify-content: center;
     position: static;
 }
-
+.texto-inferior{
+    bottom: 0;
+}
 .parrafo-texto-superior, .parrafo-texto-inferior{
     font-size: 40px;
     padding: 3%;
