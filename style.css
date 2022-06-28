@@ -31,17 +31,23 @@ body{
     height: 430px;
     width: 430px;
     background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-.texto-arriba, .texto-abajo{
+.imagen{
+    height: 430px;
+    width: 430px;
+    flex-grow: 1;
+    background-image: url('https://placekitten.com/1000/1000');
+    background-size: cover;
+}
+.texto-superior, .texto-inferior{
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: static;
 }
-.parrafo-texto-arriba, .parrafo-texto-abajo{
+
+.parrafo-texto-superior, .parrafo-texto-inferior{
     font-size: 40px;
     padding: 3%;
 }
@@ -111,10 +117,10 @@ input[type='range']{
 .valor-color{
     font-size: 12px;
 }
-.panel-imagen{
+.panel-texto{
     display: none;
 }
-.titulo-texto{
+.titulo-texto, .titulo-imagen{
     text-align: center;
 }
 .panel-color-y-fondo{

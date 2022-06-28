@@ -24,10 +24,10 @@
     <header class="header">
       <h1>Generador de Memes</h1>
       <div class="header-botones">
-        <button class="header-boton">
+        <button class="header-boton" id="boton-panel-imagen">
           <i class="fa-solid fa-image"></i> Imagen
         </button>
-        <button class="header-boton">
+        <button class="header-boton" id="boton-panel-texto">
           <i class="fa-solid fa-pencil"></i> Texto
         </button>
         <!-- Boton de modo Oscuro buscar en la clase -->
@@ -35,11 +35,12 @@
     </header>
     <main class="contenedor-principal">
       <div class="cuadrado-imagen">
-        <div class="texto-arriba">
-          <p class="parrafo-texto-arriba">TOP TEXT</p>
+        <div class="texto-superior" id="texto-superior">
+          <p class="parrafo-texto-superior">TOP TEXT</p>
         </div>
-        <div class="texto-abajo">
-          <p class="parrafo-texto-abajo">BOTTOM TEXT</p>
+        <div class="imagen"></div>
+        <div class="texto-inferior" id="texto-inferior">
+          <p class="parrafo-texto-inferior">BOTTOM TEXT</p>
         </div>
       </div>
       <button class="boton-guardar-imagen">
@@ -50,8 +51,9 @@
       <button class="boton-panel-cierre">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <div class="panel-imagen">
-        <h2>Imagen</h2>
+      <!-- aside del editor de imagen -->
+      <div class="panel-imagen" id="panel-imagen">
+        <h2 class="titulo-imagen">Imagen</h2>
         <div class="panel-imagen-url">
           <h3 class="panel-titulos-chicos">URL</h3>
           <input type="text" placeholder="Ingrese la URL aquí" />
@@ -79,7 +81,7 @@
           <h3 class="panel-titulos-chicos">Filtros</h3>
           <div class="brillo contenedor-input-rango">
             <label for="">Brillo</label>
-            <input type="range" />
+            <input type="range" class="sarasa"/>
           </div>
           <div class="opacidad contenedor-input-rango">
             <label for="">Opacidad</label>
@@ -119,14 +121,16 @@
             </button>
           </div>
         </div>
+
       </div>
-      <div class="panel-texto">
+      <!-- aside del editor de texto -->
+      <div class="panel-texto" id="panel-texto">
         <h2 class="titulo-texto">Texto</h2>
         <div>
           <h3 class="panel-titulos-chicos">Superior</h3>
           <textarea name="" id="" cols="30" rows="1" class="tomar-todo-el-ancho"></textarea>
           <div class="contenedor-checkbox-label">
-            <input type="checkbox" id="sin-texto-superior" />
+            <input type="checkbox" id="boton-sin-texto-superior" />
             <label for="sin-texto-superior" class="label-checkbox"
               >Sin texto superior</label
             >
@@ -136,7 +140,7 @@
           <h3 class="panel-titulos-chicos">Inferior</h3>
           <textarea name="" id="" cols="30" rows="1" class="tomar-todo-el-ancho"></textarea>
           <div class="contenedor-checkbox-label">
-            <input type="checkbox" id="sin-texto-inferior" />
+            <input type="checkbox" id="boton-sin-texto-inferior">
             <label for="sin-texto-inferior" class="label-checkbox"
               >Sin texto inferior</label
             >
