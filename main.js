@@ -17,12 +17,30 @@ const textoSuperior= document.getElementById('texto-superior')
 const textoInferior= document.getElementById('texto-inferior')
 const botonSinTextoSuperior= document.getElementById('boton-sin-texto-superior')
 const botonSinTextoInferior= document.getElementById('boton-sin-texto-inferior')
-
+const fondoTransparenteInput= document.getElementById('fondo-transparente-input')
 botonSinTextoSuperior.addEventListener('click',()=>{
     if (botonSinTextoSuperior.checked){
         textoSuperior.style.display= 'none';
     }
     else{
-        textoInferior.style.display='inline-block';
+        textoSuperior.style.display='flex';
+    }
+})
+botonSinTextoInferior.addEventListener('click',()=>{
+    if (botonSinTextoInferior.checked){
+        textoInferior.style.display= 'none';
+    }
+    else{
+        textoInferior.style.display='flex';
+    }
+})
+fondoTransparenteInput.addEventListener('click',()=>{
+    if (fondoTransparenteInput.checked){
+        textoInferior.style.display='none';
+        textoSuperior.style.display= 'none';
+    }
+    else{
+        textoInferior.style.display='flex';
+        textoSuperior.style.display='flex';
     }
 })

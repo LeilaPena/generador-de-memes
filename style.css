@@ -47,15 +47,9 @@ body{
     /* margin-block-end: 1em; */
     
 }
-.texto-superior{
-     display: flex;
-    justify-content: flex-start; 
-    
-}
-.texto-inferior{
+.espacio-centro{
     display: flex;
-    justify-content:flex-end;
-  
+    flex-grow: 1;
 }
 .parrafo-texto-superior, .parrafo-texto-inferior{
     font-size: 40px;
