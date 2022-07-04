@@ -52,3 +52,13 @@ const urlImagen= event.target.value;
 cuadradoImagen.style.backgroundImage=`url("${urlImagen}")`;
 
 })
+
+//Input range para estilar imagen meme
+const points = document.getElementById('points');
+const range = document.getElementById('range');
+const img = document.getElementById('cuadrado-imagen');
+
+points.addEventListener('input', (event) => {
+      const valorActual = event.target.value;
+    img.style.filter = `brightness(${valorActual}%)`;
+   })
