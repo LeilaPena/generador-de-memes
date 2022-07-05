@@ -1,4 +1,4 @@
-// Botones para paneles de texto e imagen
+// Botones para paneles de texto e imagen-----------------------------------------------------------------------
 const panelTexto = document.getElementById('panel-texto');
 const panelImagen = document.getElementById('panel-imagen');
 const botonPanelImagen= document.getElementById('boton-panel-imagen');
@@ -12,7 +12,7 @@ botonPanelTexto.addEventListener('click',()=>{
     panelTexto.style.display='inline-block';
     panelImagen.style.display='none';
 })
-// Botones para cartel de top text y bottom text
+// Botones para cartel de top text y bottom text------------------------------------------------------------------
 const textoSuperior= document.getElementById('texto-superior')
 const textoInferior= document.getElementById('texto-inferior')
 const checkboxSinTextoSuperior= document.getElementById('checkbox-sin-texto-superior')
@@ -53,11 +53,89 @@ cuadradoImagen.style.backgroundImage=`url("${urlImagen}")`;
 
 })
 
-//Input range para estilar imagen meme
-const points = document.getElementById('points');
-const range = document.getElementById('range');
-
-points.addEventListener('input', (event) => {
+//Input range para estilar imagen meme---------------------------------------------------------------------------
+// Brillo
+const pointsBrillo = document.getElementById('points-brillo');
+pointsBrillo.addEventListener('input', (event) => {
     const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `brightness(${valorActual}%)`;
+    cuadradoImagen.style.filter = `brightness(${valorActual})`;
    })
+
+// Opacidad
+const pointsOpacidad = document.getElementById('points-opacidad');  
+pointsOpacidad.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `opacity(${valorActual})`;
+   })
+
+// Contraste
+const pointsContraste = document.getElementById('points-contraste');  
+pointsContraste.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `contrast(${valorActual}%)`;
+   })
+
+// Desenfoque
+const pointsDesenfoque = document.getElementById('points-desenfoque');  
+pointsDesenfoque.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `blur(${valorActual}px)`;
+   })
+
+// Escala de grises
+const pointsGrises = document.getElementById('points-grises');  
+pointsGrises.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `grayscale(${valorActual}%)`;
+   })
+
+// Sepia
+const pointsSepia = document.getElementById('points-sepia');  
+pointsSepia.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `sepia(${valorActual}%)`;
+   })
+
+// HUE
+const pointsHUE = document.getElementById('points-hue');  
+pointsHUE.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `hue-rotate(${valorActual}deg)`;
+   })
+
+// Saturado
+const pointsSaturado = document.getElementById('points-saturado');  
+pointsSaturado.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `saturate(${valorActual}%)`;
+   })
+
+// Negativo
+const pointsNegativo = document.getElementById('points-negativo');  
+pointsNegativo.addEventListener('input', (event) => {
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `invert(${valorActual})`;
+   })
+
+//Input Restablecer filtros--------------------------------------------------------------------------------------
+const botonRestablecerFiltros = document.getElementById('boton-restablecer-filtros')
+botonRestablecerFiltros.addEventListener('click',()=>{
+    pointsBrillo.value= 1;
+    cuadradoImagen.style.filter = `brightness(1)`;
+    pointsOpacidad.value= 1;
+    cuadradoImagen.style.filter = `opacity(1)`;
+    pointsContraste.value= 100;
+    cuadradoImagen.style.filter = `contrast(1%)`;
+    pointsDesenfoque.value= 0;
+    cuadradoImagen.style.filter = `blur(0px)`;
+    pointsGrises.value= 0;
+    cuadradoImagen.style.filter = `grayscale(1%)`;
+    pointsSepia.value= 0;
+    cuadradoImagen.style.filter = `sepia(0%)`;
+    pointsHUE.value= 0;
+    cuadradoImagen.style.filter = `rotate(0deg)`;
+    pointsSaturado.value= 100;
+    cuadradoImagen.style.filter = `saturation(100%)`;
+    pointsNegativo.value= 0;
+    cuadradoImagen.style.filter = `invert(1)`;
+})

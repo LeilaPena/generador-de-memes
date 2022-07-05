@@ -76,43 +76,43 @@
         <div class="panel-imagen-filtros">
           <h3 class="panel-titulos-chicos">Filtros</h3>
           <div class="brillo contenedor-input-rango">
-            <label for="points">Brillo</label>
-            <input type="range" id="points" min="0" max="100" />
+            <label for="points-brillo">Brillo</label>
+            <input type="range" id="points-brillo" min="0" max="1" step="0.1" value="1"/>
           </div>
           <div class="opacidad contenedor-input-rango">
-            <label for="">Opacidad</label>
-            <input type="range" />
+            <label for="points-opacidad">Opacidad</label>
+            <input type="range" id="points-opacidad" min="0" max="1" step="0.1" value="1"/>
           </div>
           <div class="contraste contenedor-input-rango">
-            <label for="">Contraste</label>
-            <input type="range" />
+            <label for="points-contraste">Contraste</label>
+            <input type="range" id="points-contraste" min="100" max="1000" step="1" value="100"/>
           </div>
           <div class="desenfoque contenedor-input-rango">
-            <label for="">Desenfoque</label>
-            <input type="range" />
+            <label for="points-desenfoque">Desenfoque</label>
+            <input type="range" id="points-desenfoque" min="0" max="10" step="0.1" value="0"/>
           </div>
           <div class="escala-de-grises contenedor-input-rango">
-            <label for="">Escala de grises</label>
-            <input type="range" />
+            <label for="points-grises">Escala de grises</label>
+            <input type="range" id="points-grises" min="0" max="100" step="1" value="0"/>
           </div>
           <div class="sepia contenedor-input-rango">
-            <label for="">Sepia</label>
-            <input type="range" />
+            <label for="points-sepia">Sepia</label>
+            <input type="range" id="points-sepia" min="0" max="100" step="1" value="0"/>
           </div>
           <div class="Hue contenedor-input-rango">
-            <label for="">HUE</label>
-            <input type="range" />
+            <label for="points-hue">HUE</label>
+            <input type="range" id="points-hue" min="0" max="359" step="1" value="0"/>
           </div>
           <div class="saturado contenedor-input-rango">
-            <label for="">Saturado</label>
-            <input type="range" />
+            <label for="points-saturado">Saturado</label>
+            <input type="range" id="points-saturado" min="100" max="1000" step="10" value="100"/>
           </div>
           <div class="negativo contenedor-input-rango">
-            <label for="">Negativo</label>
-            <input type="range" />
+            <label for="points-negativo">Negativo</label>
+            <input type="range" id="points-negativo" min="0" max="1" step="0.1" value="0"/>
           </div>
           <div class="contenedor-boton-restablecer-filtros">
-            <button class="boton-restablecer-filtros">
+            <button class="boton-restablecer-filtros" id="boton-restablecer-filtros">
               Restablecer filtros
             </button>
           </div>
