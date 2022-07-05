@@ -63,13 +63,13 @@
               <span class="valor-color" id="valor-color-fondo">#000000</span>
             </div>
             <div class="panel-imagen-fondo-opciones">
-              <select class="opciones-filtros" id="opcion-filtros">
-                <option value="">Ninguno</option>
-                <option value="">Aclarar</option>
-                <option value="">Oscurecer</option>
-                <option value="">Diferencia</option>
-                <option value="">Luminosidad</option>
-                <option value="">Multiplicar</option>
+              <select class="opciones-filtros" id="select-filtros">
+                <option value="unset">Ninguno</option>
+                <option value="lighten">Aclarar</option>
+                <option value="darken">Oscurecer</option>
+                <option value="difference">Diferencia</option>
+                <option value="luminosity">Luminosidad</option>
+                <option value="multiply">Multiplicar</option>
               </select>
             </div>
           </div>
@@ -157,15 +157,14 @@
         <div>
           <h3 class="panel-titulos-chicos">Fuente</h3>
           <div>
-            <select name="" id="" class="opciones-fuente tomar-todo-el-ancho">
+            <select name="" id="select-fuentes" class="opciones-fuente tomar-todo-el-ancho">
               <option value="Arial">Arial</option>
               <option value="Arial Black">Arial Black</option>
-              <option value="American">American</option>
-              <option value="Typewriter">Typewriter</option>
-              <option value="Andale Mono">Andale Mono</option>
-              <option value="Comic Sans MS">Comic Sans MS</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Lucida Sans">Lucida Sans</option>
+              <option value="Comic Sans MS">Comic Sans Ms</option>
               <option value="Helvetica">Helvetica</option>
-              <option value="Impact">Impact</option>
+              <option value="Impact" selected>Impact</option>
               <option value="Verdana">Verdana</option>
               <option value="Times New Roman">Times New Roman</option>
             </select>

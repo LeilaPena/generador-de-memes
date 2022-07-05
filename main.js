@@ -61,7 +61,12 @@ const colorFondo = event.target.value;
 cuadradoImagen.style.backgroundColor= colorFondo;
 valorColorFondo.innerText= colorFondo.toUpperCase();
 })
-
+//Select para filtros mezclados
+const selectFiltros = document.getElementById('select-filtros');
+selectFiltros.addEventListener('change',(event)=>{
+    const opcion = event.target.value;
+    cuadradoImagen.style.backgroundBlendMode= opcion;
+})
 
 //Input range para estilar imagen meme---------------------------------------------------------------------------
 // Brillo
@@ -162,5 +167,11 @@ textareaInferior.addEventListener('input', (event)=>{
     textoInferior.innerText= texto;
 })
 
-//Input opciones filtro
+//Select opciones de fonts
+const selectFuentes = document.getElementById('select-fuentes');
+selectFuentes.addEventListener('change', (event)=>{
+    const fuente = event.target.value;
+    textoInferior.style.fontFamily= fuente;
+    textoSuperior.style.fontFamily= fuente;
+})
 
