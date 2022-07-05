@@ -12,6 +12,7 @@ botonPanelTexto.addEventListener('click',()=>{
     panelTexto.style.display='inline-block';
     panelImagen.style.display='none';
 })
+
 // Botones para cartel de top text y bottom text------------------------------------------------------------------
 const textoSuperior= document.getElementById('texto-superior')
 const textoInferior= document.getElementById('texto-inferior')
@@ -160,3 +161,6 @@ textareaInferior.addEventListener('input', (event)=>{
     const texto = event.target.value;
     textoInferior.innerText= texto;
 })
+
+//Input opciones filtro
+

@@ -20,6 +20,7 @@ body{
     cursor: pointer;
     padding: 0.5%;
 }
+
 .contenedor-principal{ 
     padding: 2%; 
     display: flex;
