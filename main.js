@@ -52,6 +52,15 @@ const urlImagen= event.target.value;
 cuadradoImagen.style.backgroundImage=`url("${urlImagen}")`;
 
 })
+//Input para cambiar el color del fondo
+const inputColorFondo = document.getElementById('input-color-fondo');
+const valorColorFondo = document.getElementById('valor-color-fondo');
+inputColorFondo.addEventListener('input', (event)=>{
+const colorFondo = event.target.value;
+cuadradoImagen.style.backgroundColor= colorFondo;
+valorColorFondo.innerText= colorFondo.toUpperCase();
+})
+
 
 //Input range para estilar imagen meme---------------------------------------------------------------------------
 // Brillo
@@ -137,5 +146,17 @@ botonRestablecerFiltros.addEventListener('click',()=>{
     pointsSaturado.value= 100;
     cuadradoImagen.style.filter = `saturation(100%)`;
     pointsNegativo.value= 0;
-    cuadradoImagen.style.filter = `invert(1)`;
+    cuadradoImagen.style.filter = `invert(0)`;
+})
+
+// Input de texto superior y texto inferior
+const textareaSuperior = document.getElementById('textarea-superior');
+const textareaInferior = document.getElementById('textarea-inferior');
+textareaSuperior.addEventListener('input',(event)=>{
+    const texto = event.target.value;
+    textoSuperior.innerText= texto;
+})
+textareaInferior.addEventListener('input', (event)=>{
+    const texto = event.target.value;
+    textoInferior.innerText= texto;
 })
