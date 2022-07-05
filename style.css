@@ -31,29 +31,42 @@ body{
     height: 430px;
     width: 430px;
     background-color: black;
-}
-.cuadrado-imagen{
-    background-size: cover;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-.texto-superior, .texto-inferior{
-    /* Para que sea transparente background: transparent; */
+.imagen{
+    display: flex;
+    flex-grow: 1;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+}
+/* .texto-superior, .texto-inferior{
+    Para que sea transparente background: transparent; 
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: static;
-    /* margin-block-end: 1em; */
-    
-}
-.espacio-centro{
-    display: flex;
-    flex-grow: 1;
-}
+    position:static;
+     margin-block-end: 1em; 
+}  */
 .parrafo-texto-superior, .parrafo-texto-inferior{
     font-size: 40px;
     padding: 3%;
+    background-color: white;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+}
+.parrafo-texto-superior{
+    top: 0;
+}
+.parrafo-texto-inferior{
+    bottom: 0;
 }
 .boton-guardar-imagen{
     margin-top: 1.7%;

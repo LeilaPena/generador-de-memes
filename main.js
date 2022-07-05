@@ -23,7 +23,7 @@ checkboxSinTextoSuperior.addEventListener('click',()=>{
         textoSuperior.style.display= 'none';
     }
     else{
-        textoSuperior.style.display='flex';
+        textoSuperior.style.display='inline-block';
     }
 })
 checkboxSinTextoInferior.addEventListener('click',()=>{
@@ -31,7 +31,7 @@ checkboxSinTextoInferior.addEventListener('click',()=>{
         textoInferior.style.display= 'none';
     }
     else{
-        textoInferior.style.display='flex';
+        textoInferior.style.display='inline-block';
     }
 })
 checkboxFondoTransparente.addEventListener('click',()=>{
@@ -56,9 +56,8 @@ cuadradoImagen.style.backgroundImage=`url("${urlImagen}")`;
 //Input range para estilar imagen meme
 const points = document.getElementById('points');
 const range = document.getElementById('range');
-const img = document.getElementById('cuadrado-imagen');
 
 points.addEventListener('input', (event) => {
-      const valorActual = event.target.value;
-    img.style.filter = `brightness(${valorActual}%)`;
+    const valorActual = event.target.value;
+    cuadradoImagen.style.filter = `brightness(${valorActual}%)`;
    })

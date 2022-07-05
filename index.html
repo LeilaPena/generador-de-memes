@@ -34,14 +34,10 @@
       </div>
     </header>
     <main class="contenedor-principal">
-      <div class="cuadrado-imagen" id="cuadrado-imagen">
-        <div class="texto-superior" id="texto-superior">
-          <p class="parrafo-texto-superior">TOP TEXT</p>
-        </div>
-       <div class="espacio-centro" id="espacio-centro"></div>
-        <div class="texto-inferior" id="texto-inferior">
-          <p class="parrafo-texto-inferior">BOTTOM TEXT</p>
-        </div>
+      <div class="cuadrado-imagen">
+        <div class="imagen" id="cuadrado-imagen"></div>
+        <p class="parrafo-texto-superior" id="texto-superior">TOP TEXT</p>
+        <p class="parrafo-texto-inferior" id="texto-inferior">BOTTOM TEXT</p>
       </div>
       <button class="boton-guardar-imagen">
         <i class="fa-solid fa-download"></i>Guardar imagen
@@ -56,13 +52,13 @@
         <h2 class="titulo-imagen">Imagen</h2>
         <div class="panel-imagen-url">
           <h3 class="panel-titulos-chicos">URL</h3>
-          <input type="text" placeholder="Ingrese la URL aquí" id="input-url"/>
+          <input type="text" placeholder="Ingrese la URL aquí" id="input-url" />
         </div>
         <div>
           <h3 class="panel-titulos-chicos">Fondo</h3>
           <div class="contenedor-panel-imagen-fondo">
             <div class="panel-imagen-fondo-color">
-              <input type="color" value="#000000"/>
+              <input type="color" value="#000000" />
               <span class="valor-color">#000000</span>
             </div>
             <div class="panel-imagen-fondo-opciones">
@@ -121,14 +117,19 @@
             </button>
           </div>
         </div>
-
       </div>
       <!-- aside del editor de texto -->
       <div class="panel-texto" id="panel-texto">
         <h2 class="titulo-texto">Texto</h2>
         <div>
           <h3 class="panel-titulos-chicos">Superior</h3>
-          <textarea name="" id="" cols="30" rows="1" class="tomar-todo-el-ancho"></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="1"
+            class="tomar-todo-el-ancho"
+          ></textarea>
           <div class="contenedor-checkbox-label">
             <input type="checkbox" id="checkbox-sin-texto-superior" />
             <label for="checkbox-sin-texto-superior" class="label-checkbox"
@@ -138,9 +139,15 @@
         </div>
         <div>
           <h3 class="panel-titulos-chicos">Inferior</h3>
-          <textarea name="" id="" cols="30" rows="1" class="tomar-todo-el-ancho"></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="1"
+            class="tomar-todo-el-ancho"
+          ></textarea>
           <div class="contenedor-checkbox-label">
-            <input type="checkbox" id="checkbox-sin-texto-inferior">
+            <input type="checkbox" id="checkbox-sin-texto-inferior" />
             <label for="checkbox-sin-texto-inferior" class="label-checkbox"
               >Sin texto inferior</label
             >
@@ -149,26 +156,32 @@
         <div>
           <h3 class="panel-titulos-chicos">Fuente</h3>
           <div>
-          <select name="" id="" class="opciones-fuente tomar-todo-el-ancho">
-            <option value="Arial">Arial</option>
-            <option value="Arial Black">Arial Black</option>
-            <option value="American">American</option>
-            <option value="Typewriter">Typewriter</option>
-            <option value="Andale Mono">Andale Mono</option>
-            <option value="Comic Sans MS">Comic Sans MS</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Impact">Impact</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Times New Roman">Times New Roman</option>
-          </select>
-          <div class="contenedor-fuente-opciones ">
-            <!-- Cambiar nombre -->
-            <input type="number" name="" id="" class="fuente-tamanio"/>
-            <button class="boton-fuente"><i class="fa-solid fa-align-left"></i></button>
-            <button class="boton-fuente"><i class="fa-solid fa-align-center"></i></button>
-            <button class="boton-fuente"><i class="fa-solid fa-align-right"></i></button>
+            <select name="" id="" class="opciones-fuente tomar-todo-el-ancho">
+              <option value="Arial">Arial</option>
+              <option value="Arial Black">Arial Black</option>
+              <option value="American">American</option>
+              <option value="Typewriter">Typewriter</option>
+              <option value="Andale Mono">Andale Mono</option>
+              <option value="Comic Sans MS">Comic Sans MS</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Impact">Impact</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Times New Roman">Times New Roman</option>
+            </select>
+            <div class="contenedor-fuente-opciones">
+              <!-- Cambiar nombre -->
+              <input type="number" name="" id="" class="fuente-tamanio" />
+              <button class="boton-fuente">
+                <i class="fa-solid fa-align-left"></i>
+              </button>
+              <button class="boton-fuente">
+                <i class="fa-solid fa-align-center"></i>
+              </button>
+              <button class="boton-fuente">
+                <i class="fa-solid fa-align-right"></i>
+              </button>
+            </div>
           </div>
-        </div>
         </div>
         <div>
           <div class="panel-color-y-fondo">
@@ -208,7 +221,7 @@
         </div>
         <div class="contenedor-espaciado">
           <h3>Espaciado</h3>
-          <input type="number" name="" id="" class="tomar-todo-el-ancho"/>
+          <input type="number" name="" id="" class="tomar-todo-el-ancho" />
         </div>
         <div class="contenedor-espaciado">
           <h3 class="panel-titulos-chicos">Interlineado</h3>
