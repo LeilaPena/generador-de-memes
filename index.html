@@ -170,14 +170,14 @@
             </select>
             <div class="contenedor-fuente-opciones">
               <!-- Cambiar nombre -->
-              <input type="number" name="" id="" class="fuente-tamanio" />
-              <button class="boton-fuente">
+              <input type="number" name="" id="input-tamanio-letra" class="fuente-tamanio" value="40" min="12" max="100"/>
+              <button class="boton-fuente" id="boton-align-left">
                 <i class="fa-solid fa-align-left"></i>
               </button>
-              <button class="boton-fuente">
+              <button class="boton-fuente" id="boton-align-center">
                 <i class="fa-solid fa-align-center"></i>
               </button>
-              <button class="boton-fuente">
+              <button class="boton-fuente" id="boton-align-right">
                 <i class="fa-solid fa-align-right"></i>
               </button>
             </div>
@@ -190,20 +190,20 @@
               <input
                 name="Color de texto"
                 type="color"
-                id="color-texto-input"
+                id="input-color-texto"
                 value="#000000"
               />
-              <span id="color-texto-span" class="valor-color">#000000</span>
+              <span id="span-color-texto" class="valor-color">#000000</span>
             </div>
             <div class="panel-color-fondo">
               <h3 class="panel-titulos-chicos">Fondo</h3>
               <input
                 name="Color de fondo"
                 type="color"
-                id="color-fondo-input"
-                value="#000000"
+                id="input-color-fondo-texto"
+                value="#FFFFFF"
               />
-              <span id="color-fondo-span" class="valor-color">#000000</span>
+              <span id="span-color-fondo-texto" class="valor-color">#FFFFFF</span>
             </div>
           </div>
           <div class="contenedor-checkbox-label">
@@ -215,23 +215,23 @@
         </div>
         <div class="contenedor-contorno">
           <h3 class="panel-titulos-chicos">Contorno</h3>
-          <button class="boton-contorno">Ninguno</button>
-          <button class="boton-contorno">Claro</button>
-          <button class="boton-contorno">Oscuro</button>
+          <button class="boton-contorno" id="boton-contorno-ninguno">Ninguno</button>
+          <button class="boton-contorno" id="boton-contorno-claro">Claro</button>
+          <button class="boton-contorno" id="boton-contorno-oscuro">Oscuro</button>
         </div>
         <div class="contenedor-espaciado">
           <h3>Espaciado</h3>
-          <input type="number" name="" id="" class="tomar-todo-el-ancho" />
+          <input type="number" name="" id="input-espaciado" class="tomar-todo-el-ancho" value="25" min="0" max="50"/>
         </div>
         <div class="contenedor-espaciado">
           <h3 class="panel-titulos-chicos">Interlineado</h3>
-          <select name="" id="" class="select-interlineado tomar-todo-el-ancho">
-            <option value="">0.8</option>
-            <option value="">1</option>
-            <option value="">1.2</option>
-            <option value="">1.5</option>
-            <option value="">2</option>
-            <option value="">2.5</option>
+          <select name="" id="select-interlineado" class="select-interlineado tomar-todo-el-ancho" >
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2" selected>1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
           </select>
         </div>
       </div>

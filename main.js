@@ -14,11 +14,10 @@ botonPanelTexto.addEventListener('click',()=>{
 })
 
 // Botones para cartel de top text y bottom text------------------------------------------------------------------
-const textoSuperior= document.getElementById('texto-superior')
-const textoInferior= document.getElementById('texto-inferior')
-const checkboxSinTextoSuperior= document.getElementById('checkbox-sin-texto-superior')
-const checkboxSinTextoInferior= document.getElementById('checkbox-sin-texto-inferior')
-const checkboxFondoTransparente= document.getElementById('checkbox-fondo-transparente')
+const textoSuperior= document.getElementById('texto-superior');
+const textoInferior= document.getElementById('texto-inferior');
+const checkboxSinTextoSuperior= document.getElementById('checkbox-sin-texto-superior');
+const checkboxSinTextoInferior= document.getElementById('checkbox-sin-texto-inferior');
 checkboxSinTextoSuperior.addEventListener('click',()=>{
     if (checkboxSinTextoSuperior.checked){
         textoSuperior.style.display= 'none';
@@ -35,19 +34,10 @@ checkboxSinTextoInferior.addEventListener('click',()=>{
         textoInferior.style.display='inline-block';
     }
 })
-checkboxFondoTransparente.addEventListener('click',()=>{
-    if (checkboxFondoTransparente.checked){
-        textoInferior.style.visibility='hidden';
-        textoSuperior.style.visibility= 'hidden';
-    }
-    else{
-        textoInferior.style.visibility='visible';
-        textoSuperior.style.visibility='visible';
-    }
-})
+
 // Input para ingresar URL
 const inputURL=document.getElementById('input-url');
-const cuadradoImagen= document.getElementById('cuadrado-imagen')
+const cuadradoImagen= document.getElementById('cuadrado-imagen');
 inputURL.addEventListener('input',event =>{
 const urlImagen= event.target.value;
 cuadradoImagen.style.backgroundImage=`url("${urlImagen}")`;
@@ -63,7 +53,7 @@ valorColorFondo.innerText= colorFondo.toUpperCase();
 })
 //Select para filtros mezclados
 const selectFiltros = document.getElementById('select-filtros');
-selectFiltros.addEventListener('change',(event)=>{
+selectFiltros.addEventListener('input',(event)=>{
     const opcion = event.target.value;
     cuadradoImagen.style.backgroundBlendMode= opcion;
 })
@@ -169,9 +159,95 @@ textareaInferior.addEventListener('input', (event)=>{
 
 //Select opciones de fonts
 const selectFuentes = document.getElementById('select-fuentes');
-selectFuentes.addEventListener('change', (event)=>{
+selectFuentes.addEventListener('input', (event)=>{
     const fuente = event.target.value;
     textoInferior.style.fontFamily= fuente;
     textoSuperior.style.fontFamily= fuente;
 })
 
+//Input para tamaño de la letra
+const inputTamanioLetra = document.getElementById('input-tamanio-letra');
+inputTamanioLetra.addEventListener('input',(event)=>{
+    const tamanioLetra = event.target.value;
+    textoSuperior.style.fontSize= `${tamanioLetra}px`;
+    textoInferior.style.fontSize= `${tamanioLetra}px`;
+})
+
+//Botones para alinear el texto
+const botonAlignLeft = document.getElementById('boton-align-left');
+const botonAlignCenter = document.getElementById('boton-align-center');
+const botonAlignRight = document.getElementById('boton-align-right');
+botonAlignLeft.addEventListener('click',()=>{
+    textoSuperior.style.textAlign= 'left';
+    textoInferior.style.textAlign= 'left';
+})
+botonAlignCenter.addEventListener('click',()=>{
+    textoSuperior.style.textAlign= 'center';
+    textoInferior.style.textAlign= 'center';
+})
+botonAlignRight.addEventListener('click',()=>{
+    textoSuperior.style.textAlign= 'right';
+    textoInferior.style.textAlign= 'right';
+})
+
+//Input para color de letra y color de fondo de letra
+const inputColorTexto = document.getElementById('input-color-texto');
+const inputColorFondoTexto = document.getElementById('input-color-fondo-texto');
+const spanColorTexto= document.getElementById('span-color-texto');
+const spanColorFondoTexto= document.getElementById('span-color-fondo-texto');
+inputColorTexto.addEventListener('input', (event)=>{
+    const colorTexto = event.target.value;
+    textoSuperior.style.color= colorTexto;
+    textoInferior.style.color= colorTexto;
+    spanColorTexto.innerText= colorTexto.toUpperCase();
+})
+inputColorFondoTexto.addEventListener('input', (event)=>{
+    const colorFondoTexto = event.target.value;
+    textoSuperior.style.backgroundColor= colorFondoTexto;
+    textoInferior.style.backgroundColor= colorFondoTexto;
+    spanColorFondoTexto.innerText= colorFondoTexto.toUpperCase();})
+
+//Input fondo transparente 
+const checkboxFondoTransparente= document.getElementById('checkbox-fondo-transparente')
+checkboxFondoTransparente.addEventListener('click',()=>{
+    if (checkboxFondoTransparente.checked){
+        textoInferior.style.backgroundColor='transparent';
+        textoSuperior.style.backgroundColor= 'transparent';
+    }
+    else{
+        textoSuperior.style.backgroundColor= inputColorFondoTexto.value;
+        textoInferior.style.backgroundColor= inputColorFondoTexto.value;
+    }
+})
+
+//Contorno para las letras
+const botonContornoNinguno = document.getElementById('boton-contorno-ninguno');
+const botonContornoClaro = document.getElementById('boton-contorno-claro');
+const botonContornoOscuro = document.getElementById('boton-contorno-oscuro');
+botonContornoOscuro.addEventListener('click', ()=>{
+    textoSuperior.style.textShadow = '2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black';
+    textoInferior.style.textShadow = '2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black';
+})
+botonContornoClaro.addEventListener('click', ()=>{
+    textoSuperior.style.textShadow = '2px 2px white, -2px 2px white, 2px -2px white, -2px -2px white';
+    textoInferior.style.textShadow = '2px 2px white, -2px 2px white, 2px -2px white, -2px -2px white';
+})
+botonContornoNinguno.addEventListener('click', ()=>{
+    textoSuperior.style.textShadow = 'unset';
+    textoInferior.style.textShadow = 'unset';
+})
+
+//Input espaciado 
+const inputEspaciado = document.getElementById('input-espaciado');
+inputEspaciado.addEventListener('input', event =>{
+    const espaciado = event.target.value;
+    textoSuperior.style.padding= `${espaciado}px`;
+    textoInferior.style.padding= `${espaciado}px`;
+})
+//Input interlineado
+const selectInterlineado = document.getElementById('select-interlineado');
+selectInterlineado.addEventListener('input',event =>{
+    const interlineado = event.target.value;
+    textoSuperior.style.lineHeight= interlineado;
+    textoInferior.style.lineHeight= interlineado;
+})

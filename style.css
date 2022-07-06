@@ -45,24 +45,16 @@ body{
     box-sizing: border-box;
     position: absolute;
 }
-/* .texto-superior, .texto-inferior{
-    Para que sea transparente background: transparent; 
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:static;
-     margin-block-end: 1em; 
-}  */
 .parrafo-texto-superior, .parrafo-texto-inferior{
     font-size: 40px;
-    padding: 3%;
+    padding: 25px;
     background-color: white;
     text-align: center;
     box-sizing: border-box;
     position: absolute;
     width: 100%;
     font-family: Impact;
+    line-height: 1.2;
 }
 .parrafo-texto-superior{
     top: 0;
