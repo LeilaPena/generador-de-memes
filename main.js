@@ -211,3 +211,9 @@ selectInterlineado.addEventListener('input',event =>{
     textoSuperior.style.lineHeight= interlineado;
     textoInferior.style.lineHeight= interlineado;
 })
+//Boton descarga
+const botonGuardarImagen = document.getElementById('boton-guardar-imagen');
+const contenedorImagen= document.getElementById('contenedor-imagen');
+botonGuardarImagen.addEventListener('click', ()=>{
+    domtoimage.toBlob(contenedorImagen).then((blob) => saveAs(blob, 'mi-meme.png'))
+})

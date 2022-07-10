@@ -18,6 +18,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+    ></script>
     <title>Generador de memes</title>
   </head>
   <body>
@@ -30,17 +40,16 @@
         <button class="header-boton" id="boton-panel-texto">
           <i class="fa-solid fa-pencil"></i> Texto
         </button>
-        
-        <!-- Boton de modo Oscuro buscar en la clase -->
+        <button class="header-boton">🌞 Modo claro</button>
       </div>
     </header>
     <main class="contenedor-principal">
-      <div class="cuadrado-imagen">
+      <div class="cuadrado-imagen" id="contenedor-imagen">
         <div class="imagen" id="cuadrado-imagen"></div>
         <p class="parrafo-texto-superior" id="texto-superior">TOP TEXT</p>
         <p class="parrafo-texto-inferior" id="texto-inferior">BOTTOM TEXT</p>
       </div>
-      <button class="boton-guardar-imagen">
+      <button class="boton-guardar-imagen" id="boton-guardar-imagen">
         <i class="fa-solid fa-download"></i>Guardar imagen
       </button>
     </main>
@@ -58,8 +67,8 @@
         <div>
           <h3 class="panel-titulos-chicos">Fondo</h3>
           <div class="contenedor-panel-imagen-fondo">
-            <div class="panel-imagen-fondo-color">
-              <input type="color" value="#000000" id="input-color-fondo"/>
+            <div class="contenedor-flexbox-input-color">
+              <input type="color" value="#000000" id="input-color-fondo" />
               <span class="valor-color" id="valor-color-fondo">#000000</span>
             </div>
             <div class="panel-imagen-fondo-opciones">
@@ -78,42 +87,108 @@
           <h3 class="panel-titulos-chicos">Filtros</h3>
           <div class="brillo contenedor-input-rango">
             <label for="points-brillo">Brillo</label>
-            <input type="range" id="points-brillo" min="0" max="1" step="0.1" value="1"/>
+            <input
+              type="range"
+              id="points-brillo"
+              min="0"
+              max="1"
+              step="0.1"
+              value="1"
+            />
           </div>
           <div class="opacidad contenedor-input-rango">
             <label for="points-opacidad">Opacidad</label>
-            <input type="range" id="points-opacidad" min="0" max="1" step="0.1" value="1"/>
+            <input
+              type="range"
+              id="points-opacidad"
+              min="0"
+              max="1"
+              step="0.1"
+              value="1"
+            />
           </div>
           <div class="contraste contenedor-input-rango">
             <label for="points-contraste">Contraste</label>
-            <input type="range" id="points-contraste" min="100" max="1000" step="1" value="100"/>
+            <input
+              type="range"
+              id="points-contraste"
+              min="100"
+              max="1000"
+              step="1"
+              value="100"
+            />
           </div>
           <div class="desenfoque contenedor-input-rango">
             <label for="points-desenfoque">Desenfoque</label>
-            <input type="range" id="points-desenfoque" min="0" max="10" step="0.1" value="0"/>
+            <input
+              type="range"
+              id="points-desenfoque"
+              min="0"
+              max="10"
+              step="0.1"
+              value="0"
+            />
           </div>
           <div class="escala-de-grises contenedor-input-rango">
             <label for="points-grises">Escala de grises</label>
-            <input type="range" id="points-grises" min="0" max="100" step="1" value="0"/>
+            <input
+              type="range"
+              id="points-grises"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+            />
           </div>
           <div class="sepia contenedor-input-rango">
             <label for="points-sepia">Sepia</label>
-            <input type="range" id="points-sepia" min="0" max="100" step="1" value="0"/>
+            <input
+              type="range"
+              id="points-sepia"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+            />
           </div>
           <div class="Hue contenedor-input-rango">
             <label for="points-hue">HUE</label>
-            <input type="range" id="points-hue" min="0" max="359" step="1" value="0"/>
+            <input
+              type="range"
+              id="points-hue"
+              min="0"
+              max="359"
+              step="1"
+              value="0"
+            />
           </div>
           <div class="saturado contenedor-input-rango">
             <label for="points-saturado">Saturado</label>
-            <input type="range" id="points-saturado" min="100" max="1000" step="10" value="100"/>
+            <input
+              type="range"
+              id="points-saturado"
+              min="100"
+              max="1000"
+              step="10"
+              value="100"
+            />
           </div>
           <div class="negativo contenedor-input-rango">
             <label for="points-negativo">Negativo</label>
-            <input type="range" id="points-negativo" min="0" max="1" step="0.1" value="0"/>
+            <input
+              type="range"
+              id="points-negativo"
+              min="0"
+              max="1"
+              step="0.1"
+              value="0"
+            />
           </div>
           <div class="contenedor-boton-restablecer-filtros">
-            <button class="boton-restablecer-filtros" id="boton-restablecer-filtros">
+            <button
+              class="boton-restablecer-filtros"
+              id="boton-restablecer-filtros"
+            >
               Restablecer filtros
             </button>
           </div>
@@ -157,7 +232,11 @@
         <div>
           <h3 class="panel-titulos-chicos">Fuente</h3>
           <div>
-            <select name="" id="select-fuentes" class="opciones-fuente tomar-todo-el-ancho">
+            <select
+              name=""
+              id="select-fuentes"
+              class="opciones-fuente tomar-todo-el-ancho"
+            >
               <option value="Arial">Arial</option>
               <option value="Arial Black">Arial Black</option>
               <option value="Georgia">Georgia</option>
@@ -170,7 +249,15 @@
             </select>
             <div class="contenedor-fuente-opciones">
               <!-- Cambiar nombre -->
-              <input type="number" name="" id="input-tamanio-letra" class="fuente-tamanio" value="40" min="12" max="100"/>
+              <input
+                type="number"
+                name=""
+                id="input-tamanio-letra"
+                class="fuente-tamanio"
+                value="40"
+                min="12"
+                max="100"
+              />
               <button class="boton-fuente" id="boton-align-left">
                 <i class="fa-solid fa-align-left"></i>
               </button>
@@ -187,23 +274,29 @@
           <div class="panel-color-y-fondo">
             <div class="panel-color-letra">
               <h3 class="panel-titulos-chicos">Color</h3>
-              <input
-                name="Color de texto"
-                type="color"
-                id="input-color-texto"
-                value="#000000"
-              />
-              <span id="span-color-texto" class="valor-color">#000000</span>
+              <div class="contenedor-flexbox-input-color">
+                <input
+                  name="Color de texto"
+                  type="color"
+                  id="input-color-texto"
+                  value="#000000"
+                />
+                <span id="span-color-texto" class="valor-color">#000000</span>
+              </div>
             </div>
             <div class="panel-color-fondo">
               <h3 class="panel-titulos-chicos">Fondo</h3>
-              <input
-                name="Color de fondo"
-                type="color"
-                id="input-color-fondo-texto"
-                value="#FFFFFF"
-              />
-              <span id="span-color-fondo-texto" class="valor-color">#FFFFFF</span>
+              <div class="contenedor-flexbox-input-color">
+                <input
+                  name="Color de fondo"
+                  type="color"
+                  id="input-color-fondo-texto"
+                  value="#FFFFFF"
+                />
+                <span id="span-color-fondo-texto" class="valor-color"
+                  >#FFFFFF</span
+                >
+              </div>
             </div>
           </div>
           <div class="contenedor-checkbox-label">
@@ -215,17 +308,35 @@
         </div>
         <div class="contenedor-contorno">
           <h3 class="panel-titulos-chicos">Contorno</h3>
-          <button class="boton-contorno" id="boton-contorno-ninguno">Ninguno</button>
-          <button class="boton-contorno" id="boton-contorno-claro">Claro</button>
-          <button class="boton-contorno" id="boton-contorno-oscuro">Oscuro</button>
+          <button class="boton-contorno" id="boton-contorno-ninguno">
+            Ninguno
+          </button>
+          <button class="boton-contorno" id="boton-contorno-claro">
+            Claro
+          </button>
+          <button class="boton-contorno" id="boton-contorno-oscuro">
+            Oscuro
+          </button>
         </div>
         <div class="contenedor-espaciado">
           <h3>Espaciado</h3>
-          <input type="number" name="" id="input-espaciado" class="tomar-todo-el-ancho" value="25" min="0" max="50"/>
+          <input
+            type="number"
+            name=""
+            id="input-espaciado"
+            class="tomar-todo-el-ancho"
+            value="25"
+            min="0"
+            max="50"
+          />
         </div>
         <div class="contenedor-espaciado">
           <h3 class="panel-titulos-chicos">Interlineado</h3>
-          <select name="" id="select-interlineado" class="select-interlineado tomar-todo-el-ancho" >
+          <select
+            name=""
+            id="select-interlineado"
+            class="select-interlineado tomar-todo-el-ancho"
+          >
             <option value="0.8">0.8</option>
             <option value="1">1</option>
             <option value="1.2" selected>1.2</option>
