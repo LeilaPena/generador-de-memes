@@ -59,68 +59,28 @@ selectFiltros.addEventListener('input',(event)=>{
 })
 
 //Input range para estilar imagen meme---------------------------------------------------------------------------
-// Brillo
 const pointsBrillo = document.getElementById('points-brillo');
-pointsBrillo.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `brightness(${valorActual})`;
-   })
+const pointsOpacidad = document.getElementById('points-opacidad'); 
+const pointsContraste = document.getElementById('points-contraste');
+const pointsDesenfoque = document.getElementById('points-desenfoque');
+const pointsGrises = document.getElementById('points-grises');
+const pointsSepia = document.getElementById('points-sepia'); 
+const pointsHUE = document.getElementById('points-hue'); 
+const pointsSaturado = document.getElementById('points-saturado'); 
+const pointsNegativo = document.getElementById('points-negativo');
 
-// Opacidad
-const pointsOpacidad = document.getElementById('points-opacidad');  
-pointsOpacidad.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `opacity(${valorActual})`;
-   })
-
-// Contraste
-const pointsContraste = document.getElementById('points-contraste');  
-pointsContraste.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `contrast(${valorActual}%)`;
-   })
-
-// Desenfoque
-const pointsDesenfoque = document.getElementById('points-desenfoque');  
-pointsDesenfoque.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `blur(${valorActual}px)`;
-   })
-
-// Escala de grises
-const pointsGrises = document.getElementById('points-grises');  
-pointsGrises.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `grayscale(${valorActual}%)`;
-   })
-
-// Sepia
-const pointsSepia = document.getElementById('points-sepia');  
-pointsSepia.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `sepia(${valorActual}%)`;
-   })
-
-// HUE
-const pointsHUE = document.getElementById('points-hue');  
-pointsHUE.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `hue-rotate(${valorActual}deg)`;
-   })
-
-// Saturado
-const pointsSaturado = document.getElementById('points-saturado');  
-pointsSaturado.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `saturate(${valorActual}%)`;
-   })
-
-// Negativo
-const pointsNegativo = document.getElementById('points-negativo');  
-pointsNegativo.addEventListener('input', (event) => {
-    const valorActual = event.target.value;
-    cuadradoImagen.style.filter = `invert(${valorActual})`;
-   })
+const filtro = () =>{
+    cuadradoImagen.style.filter = `brightness(${pointsBrillo.value}) opacity(${pointsOpacidad.value}) contrast(${pointsContraste.value}%) blur(${pointsDesenfoque.value}px) grayscale(${pointsGrises.value}%) sepia(${pointsSepia.value}%) hue-rotate(${pointsHUE.value}deg) saturate(${pointsSaturado.value}%) invert(${pointsNegativo.value})`;
+}
+pointsBrillo.addEventListener('input', filtro);
+pointsOpacidad.addEventListener('input', filtro);
+pointsContraste.addEventListener('input', filtro);
+pointsDesenfoque.addEventListener('input', filtro);
+pointsGrises.addEventListener('input', filtro);
+pointsSepia.addEventListener('input', filtro);
+pointsHUE.addEventListener('input', filtro);
+pointsSaturado.addEventListener('input', filtro);
+pointsNegativo.addEventListener('input', filtro);
 
 //Input Restablecer filtros--------------------------------------------------------------------------------------
 const botonRestablecerFiltros = document.getElementById('boton-restablecer-filtros')
