@@ -66,7 +66,7 @@ body{
     bottom: 0;
 }
 .boton-guardar-imagen{
-    margin-top: 1.7%;
+    margin-top: 3%;
     border: none;
     padding: 0.8%;
     cursor:pointer;
@@ -152,6 +152,7 @@ input[type='color']::-webkit-color-swatch {
     padding: 5%;
     border-radius: 15px;
     color: white;
+    border: none;
 }
 .contenedor-input-rango label{
     font-size: 14px;
@@ -160,18 +161,18 @@ input[type='color']::-webkit-color-swatch {
     display: flex;
     flex-direction: column;
 }
-input[type='range']{
+.inputs-range{
     appearance: none;
     height: 10px;
     border-radius: 15px;
     margin: 2%;
     background-color: #827386;
 }
-input[type='range']::-webkit-slider-thumb {
+.inputs-range::-webkit-slider-thumb {
     width: 13px;
     -webkit-appearance: none;
     height: 13px;
-    background: rgb(204, 204, 204);
+    background: rgb(51, 34, 58);
     border-radius: 50%;
   }
 .contenedor-boton-restablecer-filtros{
@@ -242,4 +243,22 @@ input[type='range']::-webkit-slider-thumb {
     color: white;
     margin: 2% 0;
     border: none;
+}
+/* Boton modo claro------------------------------------------------------------------------------------ */
+.boton-modo-oscuro{
+    display: none;
+    background-color: #a286aa;
+}
+.violeta-tono-1{
+    background-color: #9772a1;
+}
+.violeta-tono-2{
+    background-color: #a286aa;
+}
+.violeta-tono-3{
+    background-color: #a079aa;
+}
+.blanco{
+    background-color: white;
+    color: #2b1b36;
 }
