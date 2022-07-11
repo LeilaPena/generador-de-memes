@@ -272,7 +272,7 @@ botonModoOscuro.addEventListener('click', () =>{
     document.body.classList.remove('violeta-tono-2');
     botonPanelImagen.classList.remove('violeta-tono-2');
     botonPanelTexto.classList.remove('violeta-tono-2');
-    botonGuardarImagen.classList.remove('violeta-tono-1');
+    botonGuardarImagen.classList.remove('blanco');
     panelEstilado.classList.remove('violeta-tono-3');
     inputURL.classList.remove('blanco');
     contenedorInputColorFondo.classList.remove('blanco');
