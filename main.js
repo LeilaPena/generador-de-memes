@@ -321,3 +321,5 @@ panelEstilado.style.display= "flex";
 botonPanelTexto.addEventListener("click", () =>{
     panelEstilado.style.display= "flex";
     })
+
+    
