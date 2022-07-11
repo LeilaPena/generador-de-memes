@@ -101,8 +101,8 @@ body{
     top: 15px;
     right: 20px;
     color: white;
-    background-color: #151820;
     display: none;
+    background-color: transparent;
 }
 /* PANEL PARA ESTILAR: SECCION IMAGEN------------------------------------------------------------------ */
 .titulo-texto, .titulo-imagen{
@@ -280,4 +280,38 @@ input[type='color']::-webkit-color-swatch {
     bottom: 0;
     left: 10px;
     color: white;
+    
+}
+
+/* Media Queries para tablet landscape */
+
+@media (min-width: 820px) and (max-width: 1024px)  {
+    .contenedor-principal{
+        align-items:flex-start;
+    }
+    .header{
+        text-align: left;
+    }
+    .panel-estilado{
+        overflow:auto;
+    }
+    .hecho-con-amor{
+        display:none;
+    }
+}
+
+/* Media Queries para tablet  */
+@media (min-width: 480px) and (max-width: 819px){
+    .panel-estilado{
+        width: 100%;
+        box-sizing: border-box;
+        overflow:auto;
+    }
+    .boton-panel-cierre{
+        display:inline-block;
+
+    }
+    .hecho-con-amor{
+        display:none;
+    }
 }

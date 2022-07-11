@@ -305,3 +305,19 @@ botonModoOscuro.addEventListener('click', () =>{
     inputEspaciado.classList.remove('blanco');
     selectInterlineado.classList.remove('blanco');
 })
+
+// boton para cerrar el panel
+
+
+const botonPanelCierre = document.getElementById('boton-panel-cierre');
+console.log(botonPanelCierre)
+botonPanelCierre.addEventListener("click", ()=>{
+    panelEstilado.style.display="none";
+})
+
+botonPanelImagen.addEventListener("click", () =>{
+panelEstilado.style.display= "flex";
+})
+botonPanelTexto.addEventListener("click", () =>{
+    panelEstilado.style.display= "flex";
+    })
